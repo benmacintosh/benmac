@@ -30,25 +30,17 @@
   }
   
         .text-box {
+            background-color: white;
             position: relative;
-            border: 2px solid black;
             clip-path: polygon(
                 2% 5%, 98% 2%, 96% 98%, 4% 95%
             );
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
-            line-height: 1.5;
-            white-space: pre-line;
-            word-wrap: break-word;
+            line-height: 1.2;
         }
-        .text-box p {
+        .text-box span {
             display: block;
             transform: rotate(var(--angle, 0deg));
-        }
-        .text-box p:nth-child(odd) {
-            --angle: -1.5deg;
-        }
-        .text-box p:nth-child(even) {
-            --angle: 1.5deg;
         }
   
 
