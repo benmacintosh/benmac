@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Style Text Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f3e9;
+        }
+        .text-box {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 18px;
+            background-color: white;
+            position: relative;
+            border: 2px solid black;
+            clip-path: polygon(
+                2% 5%, 98% 2%, 96% 98%, 4% 95%
+            );
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+            line-height: 1.5;
+        }
+        .text-box span {
+            display: block;
+            transform: rotate(var(--angle, 0deg));
+        }
+    </style>
+</head>
+<body>
+    <div class="text-box">
+        <span style="--angle: -2deg;">This is a slightly</span>
+        <span style="--angle: 1.5deg;">irregular text box,</span>
+        <span style="--angle: -1deg;">mimicking handwriting</span>
+        <span style="--angle: 2deg;">imperfections.</span>
+    </div>
+</body>
+</html>
