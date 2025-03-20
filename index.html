@@ -29,24 +29,28 @@
       padding: 0 16px 16px
   }
   
-    .text-box {
-/*         width: 300px;
-        padding: 20px;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-        font-size: 18px;
-        background-color: white; */
-        position: relative;
-        border: 2px solid black;
-        clip-path: polygon(
-            2% 5%, 98% 2%, 96% 98%, 4% 95%
-        );
-        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
-        line-height: 1.5;
-    }
-    .text-box span {
-        display: block;
-        transform: rotate(var(--angle, 0deg));
-    }
+        .text-box {
+            position: relative;
+            border: 2px solid black;
+            clip-path: polygon(
+                2% 5%, 98% 2%, 96% 98%, 4% 95%
+            );
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+            line-height: 1.5;
+            white-space: pre-line;
+            word-wrap: break-word;
+        }
+        .text-box p {
+            display: block;
+            transform: rotate(var(--angle, 0deg));
+        }
+        .text-box p:nth-child(odd) {
+            --angle: -1.5deg;
+        }
+        .text-box p:nth-child(even) {
+            --angle: 1.5deg;
+        }
+  
 
       body, h1, h2, h3, h4, h5, h6 {
       font-weight: 300;
@@ -98,10 +102,9 @@
 
     <section id="hel">
     <div class="text-box">
+              <span style="--angle: 1.5deg;">artificial intelligence. My research examines unorthodox models of computational rationality I am an anthropologist who writes about computing and artificial intelligence. My research examines unorthodox models of computational rationality, such as nonclassical logics f I am an anthropologist who writes about computing and artificial intelligence. My research examines unorthodox models of computational rationality, such as nonclassical logics f</span>
         <span style="--angle: -2deg;">I am an anthropologist who writes about computing and</span>
         <span style="--angle: 1.5deg;">artificial intelligence. My research examines unorthodox models of computational rationality</span>
-        <span style="--angle: -1deg;">mimicking handwriting</span>
-        <span style="--angle: 2deg;">imperfections.</span>
     </div>
 
     
